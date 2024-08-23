@@ -1,6 +1,7 @@
 class Person {
     private String name;
     private int age;
+    private  String email;
 
     // Getter for name
     public String getName() {
@@ -21,6 +22,16 @@ class Person {
     public void setAge(int age) {
         if (age > 0) {
             this.age = age;
+        }
+    }
+
+    //getter for email
+    public void setEmail(String email){
+        if(email.contains("@")){
+            this.email = email;
+        }
+        else{
+            System.out.println("Invalid email ID");
         }
     }
 }
